@@ -13,7 +13,7 @@ const callbackfn = (data) => {
   }
 };
 
-const responseJSON = request(baseURL + "/breeds/search?q=" + query, (err, res, body) =>{
+request(baseURL + "/breeds/search?q=" + query, (err, res, body) =>{
   if (!err) {
     console.log(callbackfn(body));
   } else {
